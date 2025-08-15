@@ -12,6 +12,7 @@ public class OfficeDocumentProcessor : DocumentProcessor
         {
             "word" => new WordDocument(),
             "excel" => new ExcelDocument(),
+            "powerpoint" => new PowerPointDocument(),
             _ => throw new ArgumentOutOfRangeException(
                 $"{type} type Document is not supported by OfficeDocumentProcessor")
         };

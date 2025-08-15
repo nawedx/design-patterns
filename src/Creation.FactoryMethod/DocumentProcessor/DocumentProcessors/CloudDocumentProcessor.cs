@@ -13,6 +13,7 @@ public class CloudDocumentProcessor: DocumentProcessor
             "pdf" => new PDFDocument(),
             "word" => new WordDocument(),
             "excel" => new ExcelDocument(),
+            "powerpoint" => new PowerPointDocument(),
             _ => throw new ArgumentOutOfRangeException(
                 $"{type} type Document is not supported by CloudDocumentProcessor")
         };
