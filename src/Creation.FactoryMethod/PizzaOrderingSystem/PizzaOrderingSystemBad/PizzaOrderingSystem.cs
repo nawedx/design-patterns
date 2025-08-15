@@ -1,4 +1,4 @@
-namespace Creation.FactoryMethod.PizzaOrderingSystemBad;
+namespace Creation.FactoryMethod.PizzaOrderingSystem.PizzaOrderingSystemBad;
 
 public class MargheritaPizza
 {

@@ -1,4 +1,4 @@
-using Creation.FactoryMethod.PizzaOrderingSystemGood;
+using Creation.FactoryMethod.PizzaOrderingSystem.PizzaOrderingSystemGood;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -12,18 +12,19 @@ public class PizzaOrderingSystemTests
     {
         _testOutputHelper = testOutputHelper ?? throw new ArgumentNullException(nameof(testOutputHelper));
     }
-    
+
     [Fact]
     public void MustOrderPizza()
     {
-        var pizzaOrderingSystem = new PizzaOrderingSystem(new AmericanPizzaStore());
-        
+        var pizzaOrderingSystem =
+            new PizzaOrderingSystem.PizzaOrderingSystemGood.PizzaOrderingSystem(new AmericanPizzaStore());
+
         var pepperoniPizza = pizzaOrderingSystem.OrderPizza("pepperoni");
         var veggiePizza = pizzaOrderingSystem.OrderPizza("veggie");
-        
+
         Assert.Equal("pepperoni", pepperoniPizza.Get());
         Assert.Equal("veggie", veggiePizza.Get());
-        
+
         _testOutputHelper.WriteLine(pepperoniPizza.Get());
         _testOutputHelper.WriteLine(veggiePizza.Get());
     }

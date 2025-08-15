@@ -1,4 +1,4 @@
-namespace Creation.FactoryMethod.PizzaOrderingSystemGood;
+namespace Creation.FactoryMethod.PizzaOrderingSystem.PizzaOrderingSystemGood;
 
 public class PizzaOrderingSystem
 {
