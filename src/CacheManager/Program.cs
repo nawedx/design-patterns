@@ -31,12 +31,18 @@ public class CacheManager
         if (_cache.TryGetValue(key, out var value))
         {
             _hitCount++;
-            return (T)value;
+
+            if (value is T typedValue)
+            {
+                return typedValue;
+            }
+
+            return default;
         }
 
         _missCount++;
 
-        return null;
+        return default;
     }
 
     public bool Remove(string key)
